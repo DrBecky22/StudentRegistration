@@ -9,17 +9,17 @@ class Bootcamp {
     constructor(campName, level, students = []) {
         this.campName = campName;
         this.level = level;
-        this.students = student;
+        this.students = students;
     }
 
     registerStudent(studentToRegister) {
-        if ((!studentToRegister.name) || (!studentToRegister.email)) {  //do the ! instead of === so that you catch all falsey values
+        if ((!studentToRegister.studentName) || (!studentToRegister.email)) {  //do the ! instead of === so that you catch all falsey values
             console.log('Invalid name or email');
             return false;
         }
     }
 
-    for(const existingStudent of this.students) {  //unclear if you need the variable declaration word const, let or var
+    for(existingStudent of this.students) {  //unclear if you need the variable declaration word const, let or var
         if (student.email === studentToRegister.email) {
             console.log("email is already registered");
             return false;
